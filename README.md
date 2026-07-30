@@ -129,9 +129,7 @@ que el proceso sea más fácil de observar y explicar desde cero.
     │       ├── ceiling_steel.png      — techo metálico.
     │       ├── ceiling_grate.png      — techo de rejilla.
     │       └── ceiling_rust.png       — techo oxidado.
-    ├── menu_background_doom.png       — fondo industrial principal del menú.
-    ├── menu_background_doom_.png      — variante del fondo del menú.
-    └── menu_background.png            — fondo alternativo conservado.
+    └── menu_background_doom.png       — fondo industrial activo del menú.
 ```
 
 ## Enfoque del proyecto

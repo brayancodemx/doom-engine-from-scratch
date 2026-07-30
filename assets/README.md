@@ -36,11 +36,11 @@ construye con losas, biseles, fijaciones, rejillas, cables, manchas, paneles,
 vigas y luminarias procedurales proyectadas directamente a 720p. El techo se
 compone antes que las paredes para que nunca pueda atravesarlas visualmente.
 
-El fondo anterior `menu_background.png` se conserva intacto y ya no es el
-recurso activo. Los sprites del demonio y las texturas del escenario forman
-parte del conjunto visual preparado para este proyecto. Las condiciones de uso
-y distribución de los recursos se mantienen bajo la licencia o autorización
-del autor del proyecto.
+`menu_background_doom.png` es el único fondo de menú incluido en la
+publicación. Los sprites del demonio y las texturas del escenario forman parte
+del conjunto visual preparado para este proyecto. Las condiciones de uso y
+distribución de los recursos se mantienen bajo la licencia o autorización del
+autor del proyecto.
 
 ## Prompts finales
 
