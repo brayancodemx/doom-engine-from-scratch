@@ -1,9 +1,11 @@
 # Procedencia de recursos visuales
 
 Los recursos visuales de esta carpeta se prepararon específicamente para este
-proyecto. No se usaron imágenes, logos ni sprites de juegos comerciales como
-entrada declarada. Los fondos verdes de las armas se eliminaron localmente;
-después se redujeron a 640×360 con muestreo por vecino más cercano.
+proyecto con herramientas de inteligencia artificial. Cuentan con la licencia
+o autorización necesaria para su uso y distribución dentro de este
+repositorio. No se usaron imágenes, logos ni sprites de juegos comerciales
+como entrada declarada. Los fondos verdes de las armas se eliminaron
+localmente; después se redujeron a 640×360 con muestreo por vecino más cercano.
 
 ## Archivos
 
@@ -35,10 +37,10 @@ vigas y luminarias procedurales proyectadas directamente a 720p. El techo se
 compone antes que las paredes para que nunca pueda atravesarlas visualmente.
 
 El fondo anterior `menu_background.png` se conserva intacto y ya no es el
-recurso activo. Los sprites del demonio fueron entregados directamente por el
-autor del proyecto y no venían acompañados por un archivo de licencia
-separado. Antes de redistribuir el proyecto o sus recursos, confirma que
-conservas los derechos de cada binario y añade aquí sus atribuciones si aplica.
+recurso activo. Los sprites del demonio y las texturas del escenario forman
+parte del conjunto visual preparado para este proyecto. Las condiciones de uso
+y distribución de los recursos se mantienen bajo la licencia o autorización
+del autor del proyecto.
 
 ## Prompts finales
 

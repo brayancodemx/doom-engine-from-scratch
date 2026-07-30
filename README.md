@@ -1,69 +1,73 @@
-# Neon Breach
+# DOOM... digo DUCK
 
-Raycaster didáctico en Python y Pygame, con mapa 2D, proyección 2.5D,
-enemigos con navegación, armas, oclusión por profundidad y escenas educativas
-que muestran cómo se construye el pipeline paso a paso.
+Un proyecto didáctico para entender cómo los videojuegos de los años 90
+creaban la ilusión de un mundo tridimensional usando matemáticas, mapas 2D y
+un renderizador mucho más sencillo que un motor 3D moderno.
 
-![Vista del juego](assets/previews/preview_juego.png)
+![Gameplay actual](assets/previews/gameplay_real_final.png)
 
-## Requisitos
+## Objetivo
 
-- Python 3.10 o posterior
-- Pygame 2.6.1
-- NumPy 2.x
+La meta no es reconstruir el código original de DOOM, sino estudiar las ideas
+que hicieron posibles los shooters clásicos: cómo un mapa plano puede
+convertirse en una vista en primera persona, cómo se proyectan las paredes y
+cómo se dibujan enemigos y armas con recursos bidimensionales.
 
-Instala las dependencias con:
+El título es la broma del proyecto: **DOOM... digo DUCK**. El resultado es un
+pequeño juego jugable y, al mismo tiempo, una demostración visual de lo que
+ocurre en cada fotograma.
 
-```powershell
-python -m pip install -r requirements.txt
-```
+## Qué se explora
 
-## Ejecutar
+- **Mapas 2D y coordenadas:** el mundo se representa como una matriz de
+  celdas, donde cada valor identifica un tipo de pared o un espacio libre.
+- **Raycasting y DDA:** se lanzan rayos desde la cámara y se calcula la celda
+  exacta que alcanza cada uno sin recorrer píxeles innecesarios.
+- **Corrección del efecto de ojo de pez:** las distancias laterales se corrigen
+  para que las paredes rectas sigan viéndose rectas.
+- **Proyección en perspectiva:** la distancia al impacto determina la altura
+  de cada columna vertical que forma la escena.
+- **Suelo, techo y materiales:** se combinan texturas, geometría procedural,
+  luces, sombras y atmósfera para dar profundidad al mapa.
+- **Sprites y billboards:** los enemigos y las armas son imágenes 2D que se
+  escalan y orientan para parecer parte del mundo.
+- **Oclusión por profundidad:** un `depth_buffer` evita que los enemigos
+  aparezcan a través de las paredes.
+- **Movimiento y colisiones:** el jugador usa trigonometría, desplazamiento
+  independiente de los FPS y colisiones deslizantes.
+- **Enemigos:** se incluyen estados de reposo, marcha, ataque, daño y muerte,
+  además de navegación para rodear obstáculos.
+- **Bucle de juego:** la actualización de la lógica y el dibujo se separan
+  para mantener un comportamiento estable en cada fotograma.
 
-```powershell
-python main.py
-python main.py --sin-hud
-python main.py --pantalla-completa
-```
+El raycasting de este proyecto es una aproximación educativa relacionada con
+los primeros shooters en primera persona. El DOOM original utilizaba un
+renderizador basado en sectores y árboles BSP; aquí se usa un raycaster para
+que el proceso sea más fácil de observar y explicar desde cero.
 
-En Windows también puedes usar `ejecutar.bat`.
+## Organización del proyecto
 
-Controles principales: `WASD` para moverte, ratón o flechas para girar,
-clic izquierdo o `Espacio` para disparar, `1` y `2` para cambiar de arma,
-`R` o `Enter` para iniciar/reiniciar, `F11` para pantalla completa y `Esc`
-para volver al menú.
+- `main.py`: coordina el bucle del juego, los estados, la entrada y la escena.
+- `map_data.py`: contiene el mapa, sus materiales y los puntos de aparición.
+- `raycasting.py`: calcula los impactos de los rayos mediante DDA.
+- `entities.py`: contiene al jugador, los enemigos, el movimiento y las
+  colisiones.
+- `renderer.py`: dibuja paredes, suelo, techo, enemigos, armas, efectos y HUD.
+- `settings.py`: reúne las constantes de cámara, física y renderizado.
+- `audio.py`: carga efectos opcionales y conserva un respaldo procedural.
+- `etapas/`: recorrido progresivo desde el mapa 2D hasta el pipeline completo.
+- `fases/`: escenas y demostraciones visuales de conceptos concretos del
+  desarrollo.
+- `fases_qhd/`: versiones de mayor resolución de algunas escenas del proceso.
 
-## Estructura
+## Enfoque del proyecto
 
-- `main.py`: bucle principal, entrada y estados del juego.
-- `entities.py`: jugador, enemigos, movimiento y colisiones.
-- `raycasting.py`: recorrido DDA y distancias de las paredes.
-- `renderer.py`: dibujo del mundo, enemigos, armas y HUD.
-- `map_data.py`: mapa y puntos de aparición.
-- `settings.py`: constantes de juego y renderizado.
-- `audio.py`: efectos de sonido con respaldo procedural.
-- `etapas/`: escenas introductorias independientes.
-- `fases/`: escenas y experimentos del proceso de desarrollo.
+Cada sistema está separado para que pueda estudiarse por partes: primero el
+mapa, después los rayos, la proyección, las entidades y finalmente la
+composición del fotograma. La intención es mostrar la tecnología que había
+detrás de los juegos de los 90 con ejemplos visuales y código legible, no
+ocultar el proceso detrás de un motor externo.
 
-## Audio y videos
-
-Los MP3 y los videos de trabajo no se incluyen en la publicación por defecto:
-su licencia no está documentada y algunos archivos son materiales de
-producción. El juego funciona sin ellos gracias a los sonidos procedurales de
-`audio.py`. Si cuentas con una licencia de redistribución, puedes colocar los
-efectos localmente en `assets/audio/` sin modificar el código.
-
-## Derechos de los recursos
-
-El código y los recursos visuales deben revisarse por separado antes de
-publicarlos o reutilizarlos. No se añade una licencia automática a este
-repositorio para no otorgar derechos sobre binarios cuyo origen o licencia aún
-deba confirmarse. Añade una licencia explícita cuando hayas decidido qué
-material puede redistribuirse.
-
-## Pruebas
-
-```powershell
-python pruebas_logica.py
-python -m py_compile main.py renderer.py entities.py raycasting.py
-```
+Los recursos visuales incluidos fueron creados específicamente para este
+proyecto con herramientas de inteligencia artificial y cuentan con la licencia
+o autorización necesaria para su uso y distribución dentro del repositorio.
