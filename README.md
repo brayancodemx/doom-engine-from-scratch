@@ -144,6 +144,13 @@ Los recursos visuales incluidos fueron creados específicamente para este
 proyecto con herramientas de inteligencia artificial y cuentan con la licencia
 o autorización necesaria para su uso y distribución dentro del repositorio.
 
-Los efectos MP3 de desarrollo no se incluyen en la publicación. `audio.py`
-genera sonidos de respaldo para que el juego siga funcionando sin depender de
-archivos de audio externos.
+## Audio
+
+This repository does not include the original game audio, voice lines, or
+modified sound effects used in the video. The project remains playable without
+those files by using its built-in audio fallback system.
+
+## Más información
+
+- YouTube channel: https://youtube.com/@BrayanCode
+- Video walkthrough: https://youtu.be/FYUqyhQbzE0
