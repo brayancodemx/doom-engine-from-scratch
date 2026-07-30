@@ -4,7 +4,38 @@ Un proyecto didáctico para entender cómo los videojuegos de los años 90
 creaban la ilusión de un mundo tridimensional usando matemáticas, mapas 2D y
 un renderizador mucho más sencillo que un motor 3D moderno.
 
-![Gameplay actual](assets/previews/gameplay_real_final.png)
+![Gameplay](assets/previews/gameplay_documental.png)
+
+## Requisitos
+
+- Python 3.10 o posterior
+- Pygame 2.6.1
+- NumPy 2.x
+
+Instala las dependencias con:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+## Cómo ejecutar
+
+Desde la carpeta del proyecto, inicia el juego con:
+
+```powershell
+python main.py
+```
+
+Opcionalmente, puedes abrirlo a pantalla completa:
+
+```powershell
+python main.py --pantalla-completa
+```
+
+Controles principales: `WASD` para moverte, ratón o flechas para girar,
+clic izquierdo o `Espacio` para disparar, `1` y `2` para cambiar de arma,
+`R` o `Enter` para iniciar o reiniciar, `F11` para pantalla completa y `Esc`
+para volver al menú.
 
 ## Objetivo
 
@@ -12,10 +43,6 @@ La meta no es reconstruir el código original de DOOM, sino estudiar las ideas
 que hicieron posibles los shooters clásicos: cómo un mapa plano puede
 convertirse en una vista en primera persona, cómo se proyectan las paredes y
 cómo se dibujan enemigos y armas con recursos bidimensionales.
-
-El título es la broma del proyecto: **DOOM... digo DUCK**. El resultado es un
-pequeño juego jugable y, al mismo tiempo, una demostración visual de lo que
-ocurre en cada fotograma.
 
 ## Qué se explora
 

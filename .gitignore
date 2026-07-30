@@ -30,7 +30,7 @@ videos/
 
 # Capturas y montajes generados durante el desarrollo
 assets/previews/*
-!assets/previews/gameplay_real_final.png
+!assets/previews/gameplay_documental.png
 
 # Sonidos opcionales: el juego tiene respaldo procedural
 assets/audio/*
