@@ -11,12 +11,11 @@ env/
 
 # Diagnósticos y archivos temporales locales
 *.log
-neon_breach_error.log
 *.patch
 *.bundle
 *.zip
 
-# Medios de trabajo o con licencia pendiente de verificar
+# Archivos multimedia no incluidos en el repositorio
 videos/
 *.mp4
 *.mov
@@ -28,22 +27,22 @@ videos/
 *.flac
 *.m4a
 
-# Capturas y montajes generados durante el desarrollo
+# Capturas no publicadas
 assets/previews/*
 !assets/previews/gameplay_documental.png
 
-# Versiones antiguas del fondo del menú, conservadas solo localmente
+# Versiones anteriores del fondo del menú
 assets/menu_background.png
 assets/menu_background_doom_.png
 
-# Sonidos opcionales: el juego tiene respaldo procedural
+# Archivos de audio opcionales
 assets/audio/*
 !assets/audio/README.md
 
-# Instrucciones internas del entorno de trabajo
+# Archivos de configuración y documentación local
 AGENTS.md
 
-# Materiales internos de producción del video
+# Material de producción no incluido
 etapas/
 fases/
 fases_qhd/
