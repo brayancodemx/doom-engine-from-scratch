@@ -1,0 +1,42 @@
+__pycache__/
+.venv/
+venv/
+env/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+
+# Diagnósticos y archivos temporales locales
+*.log
+neon_breach_error.log
+*.patch
+*.bundle
+*.zip
+
+# Medios de trabajo o con licencia pendiente de verificar
+videos/
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.m4a
+
+# Capturas y montajes generados durante el desarrollo
+assets/previews/*
+!assets/previews/preview_disparo.png
+!assets/previews/preview_juego.png
+!assets/previews/preview_rostro_danado.png
+
+# Sonidos opcionales: el juego tiene respaldo procedural
+assets/audio/*
+!assets/audio/README.md
+
+# Instrucciones internas del entorno de trabajo
+AGENTS.md
